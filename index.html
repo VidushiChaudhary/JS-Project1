@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">.ClockAbhi</div>
+  </header>
+
+  <main class="hero">
+    <section class="left">
+      <div class="card">
+        <label><strong>Set Alarm Time</strong></label>
+        <input type="time" id="alarmTime" onchange="previewTimeImage(this.value)" />
+      </div>
+
+      <div class="buttons">
+        <button onclick="setAlarm()">Set Alarm</button>
+        <button onclick="resetAlarms()">Reset</button>
+      </div>
+
+      <div id="alarmsList"></div>
+      <div id="greeting" class="info">Have a great day!</div>
+    </section>
+
+    <section class="right">
+      <div id="clock">Loading time...</div>
+      <img id="timeImage" src="" alt="Time of Day Image" class="time-img" />
+    </section>
+  </main>
+
+  <audio id="alarmAudio" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

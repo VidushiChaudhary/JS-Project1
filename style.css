@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+    color: bisque;
+  }
+  
+  header {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 1vw;
+    color: burlywood;
+  }
+  
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .left,
+  .right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 80vh;
+  }
+  
+  .card {
+    background-color: rgba(169, 169, 169, 0.2);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .card input {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: bisque;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .buttons button {
+    height: 40px;
+    padding: 0 20px;
+    border: 1.5px solid black;
+    background-color: darkgray;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  #clock {
+    font-size: 2rem;
+    padding: 10px;
+    color: #b0a9a9;
+  }
+
+  .time-img {
+    margin-top: 20px;
+    width: 100%;
+    height: 80%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  #alarmsList {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  .alarmItem {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .alarmItem button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive reorder for mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    height: auto;
+    padding: 15px;
+  }
+
+  /* Reorder: clock section first */
+  .right {
+    order: -1;
+  }
+
+  #clock {
+    font-size: 2.5rem;
+  }
+
+  .time-img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
